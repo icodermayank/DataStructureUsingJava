@@ -4,10 +4,9 @@ class Node{
     Node next;
 
     // create constructor to initilize the data of the node.
-    // Node(int data){
-    //     this.data = data;
-    //     this.next = null;
-    // }
+    Node(){
+        this.next = null;
+    }
 }
 
 class SinglyLinkedList{
@@ -32,10 +31,19 @@ class SinglyLinkedList{
         head.next = first;
         first.next = second;
         second.next = third;
-        third.next = null;
+       // third.next = null;
 
 
         // printing nodes data 
+        Node pointer = head;
+
+        System.out.print("Head--->");
+        while(pointer.next!= null){
+            System.out.print(pointer.next.data+"--->");
+            pointer.next = pointer.next.next;
+        }
+        System.out.print("Null");
+        System.out.println();
 
         
     }
